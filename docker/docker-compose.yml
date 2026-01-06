@@ -1,0 +1,14 @@
+services:
+  postgres:
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: crudms
+      POSTGRES_USER: crudms
+      POSTGRES_PASSWORD: crudms
+    ports:
+      - "5448:5432"
+    volumes:
+      - pg-crudms-data:/var/lib/postgresql/data
+
+volumes:
+  pg-crudms-data:
