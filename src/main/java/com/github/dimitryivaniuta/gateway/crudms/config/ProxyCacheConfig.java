@@ -2,13 +2,9 @@ package com.github.dimitryivaniuta.gateway.crudms.config;
 
 import com.github.dimitryivaniuta.gateway.crudms.cacheproxy.ProxyCacheBeanPostProcessor;
 import com.github.dimitryivaniuta.gateway.crudms.cacheproxy.TtlCacheStore;
-import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
-@ConfigurationProperties(prefix = "proxy-cache")
-record ProxyCacheProps(boolean enabled, long defaultTtlMs) {}
 
 @Configuration
 @EnableConfigurationProperties(ProxyCacheProps.class)
